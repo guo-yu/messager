@@ -1,0 +1,20 @@
+{
+  "name": "messager",
+  "repo": "turingou/messager",
+  "description": "a sidebar messager widget",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "component/dom": "*",
+  },
+  "development": {},
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js",
+    "template.js"
+  ],
+  "styles": [
+    "messager.css"
+  ]
+}
