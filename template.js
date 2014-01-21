@@ -1,0 +1,1 @@
+module.exports = '<div class="messager" ng-app="messager">\n    <h3>Messager</h3>\n    <div ng-controller="home">{{name}}</div>\n</div>';
