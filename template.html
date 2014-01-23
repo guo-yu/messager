@@ -1,4 +1,8 @@
 <div class="messager" ng-app="messager">
-    <h3>Messager</h3>
-    <div ng-controller="home">{{name}}</div>
+    <h3 class="title">Messager</h3>
+    <div ng-controller="contacts">
+        <div class="contact clearfix" ng-repeat="contact in contacts">
+            <img ng-src="{{contact.avatar}}" alt="{{contact.name}}" class="pull-left">
+        </div>
+    </div>
 </div>
