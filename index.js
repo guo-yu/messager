@@ -1,10 +1,12 @@
+require('angularjs')
+
 var $ = require('dom'),
     router = require('angular-ui-router'),
     store = require('angular-store'),
     template = require('./template');
 
 var messager = function(trigger, apis) {
-    if (!angular) return false
+    if (!window.angular) return false
     if (!trigger) return false
     if (!$(trigger).length) return false
     if (apis) this.apis = apis
@@ -13,6 +15,7 @@ var messager = function(trigger, apis) {
     this.init()
 }
 
+// ctrlers here
 messager.prototype.ctrlers = function(app) {
     if (!app) return false;
     app.controller('contacts', function($scope, Store) {
@@ -48,7 +51,7 @@ messager.prototype.store = function() {
 messager.prototype.init = function() {
     if (this.apis) this.store()
     this.trigger.html(template)
-    this.ctrlers(angular.module('messager', this.deps))
+    this.ctrlers(window.angular.module('messager', this.deps))
 }
 
 module.exports = messager

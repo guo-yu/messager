@@ -6,8 +6,9 @@
   "keywords": [],
   "dependencies": {
     "component/dom": "*",
-    "turingou/angular-store": "*",
+    "components/angular.js": "*",
     "angular-ui/ui-router": "*",
+    "turingou/angular-store": "*",
     "FortAwesome/Font-Awesome": "*"
   },
   "development": {},

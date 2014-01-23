@@ -2,7 +2,10 @@
     <h3 class="title">Messager</h3>
     <div ng-controller="contacts">
         <div class="contact clearfix" ng-repeat="contact in contacts">
-            <img ng-src="{{contact.avatar}}" alt="{{contact.name}}" class="pull-left">
+            <img ng-src="{{contact.avatar}}" alt="{{contact.name}}" class="avatar-mini pull-left">
+            <div class="contact-info">
+                {{contact.name}}
+            </div>
         </div>
     </div>
 </div>

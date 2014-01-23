@@ -16,3 +16,15 @@
     box-shadow: 0px 0px 10px #ddd;
     background-color: #f5f5f5;
 }
+
+.messager .avatar-mini {
+    width: 25px;
+    height: 25px;
+}
+
+.messager .contact {
+    clear: both;
+    border-bottom: 1px solid #ddd;
+    padding: 1px;
+    font-size: 12px;
+}
