@@ -1,10 +1,40 @@
 <div class="messager" ng-app="messager">
-    <h3 class="title">Messager</h3>
-    <div ng-controller="contacts">
-        <div class="contact clearfix" ng-repeat="contact in contacts">
-            <img ng-src="{{contact.avatar}}" alt="{{contact.name}}" class="avatar-mini pull-left">
-            <div class="contact-info">
-                {{contact.name}}
+    <h3 class="title">
+        小纸条
+        <div class="search pull-right">
+            <form action="#">
+                <span class="icon">
+                    <i class="fa fa-search"></i>
+                </span>
+                <input type="text" name="search" id="search" class="search-bar" />
+            </form>
+        </div>
+    </h3>
+    <div ng-controller="recent" class="contacts clearfix">
+        <div class="contact clearfix" ng-repeat="recent in recents" ng-click="openDialog($index, $event)" ng-class="{'dialog-open': $index === target && status.dialog}">
+            <img ng-src="{{recent.avatar}}" alt="{{recent.name}}" class="avatar-mini pull-left">
+            <div class="contact-info pull-left clearfix">
+                <span class="name">{{recent.name}}</span>
+                <span class="text" ng-show="recent.text">{{recent.text}}</span>
+            </div>
+        </div>
+        <div id="messager-dialog" class="dialog" ng-show="status.dialog">
+            <h3 class="dialog-title">与 {{dialog.target.name}} 的对话</h3>
+            <div class="chats clearfix">
+                <div class="error" ng-show="!dialog.dialogs">你和 TA 还没有对话哦~</div>
+                <div class="chat clearfix" ng-repeat="chat in dialog.dialogs.chats" ng-class="{'mime': chat.me}">
+                    <img ng-src="{{chat.avatar}}" alt="{{chat.name}}" class="avatar-mini pull-left" ng-hide="chat.me">
+                    <span class="text pull-left">{{chat.text}}</span>
+                </div>
+            </div>
+            <div id="messager-reply" class="messager-reply clearfix">
+                <form action="#" ng-submit="reply()">
+                    <textarea name="reply" id="messager-reply-bar" cols="30" rows="10" class="reply" ng-model="replytext"></textarea>
+                    <a ng-click="reply()" class="reply-btn pull-right" href="javascript:void(0);">
+                        <i class="fa fa-check"></i>
+                        回复
+                    </a>
+                </form>
             </div>
         </div>
     </div>

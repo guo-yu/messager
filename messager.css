@@ -1,25 +1,59 @@
+.pull-left {
+    float: left;
+}
+.pull-right {
+    float: right;
+}
+
 .messager {
     background-color: #fff;
     border: 1px solid #ddd;
     padding: 0px;
-    width: 400px;
-    height: 600px;
+    width: 250px;
+    height: 500px;
     margin-left: auto;
     margin-right: auto;
+    box-shadow: 0px 0px 12px #ddd;
+    /* just for test */
+    position: fixed;
+    top: 100px;
+    right: 500px;
+}
+
+.messager .search .icon i {
+    color: #999;
+}
+
+.messager .search-bar {
+    border: 1px solid #ddd;
+    padding: 2px;
+    border-radius: 3px;
+    background-color: #f5f5f5;
+    width: 70px;
+}
+
+.messager .search-bar:focus {
+    outline: 0;
+    background-color: #fff;
+}
+
+.messager .contacts {
+    height: 457px;
+    overflow: auto;
 }
 
 .messager .title {
     font-size: 14px;
     font-weight: bold;
-    padding: 15px;
+    padding: 10px;
     border-bottom: 1px solid #ddd;
     box-shadow: 0px 0px 10px #ddd;
     background-color: #f5f5f5;
 }
 
 .messager .avatar-mini {
-    width: 25px;
-    height: 25px;
+    width: 40px;
+    height: 40px;
 }
 
 .messager .contact {
@@ -27,4 +61,123 @@
     border-bottom: 1px solid #ddd;
     padding: 1px;
     font-size: 12px;
+}
+
+.messager .contact:hover {
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+
+.messager .contact-info {
+    padding: 0px 5px;
+    width: 180px;
+}
+
+.messager .contact-info span {
+    display: block;
+}
+
+.messager .contact-info span.name {
+    padding-top: 3px;
+}
+
+.messager .contact-info span.text {
+    color: #999;
+}
+
+.messager .dialog {
+    width: 450px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    /* just for test */
+    position: fixed;
+    z-index: 999;
+    top: 100px;
+    right: 800px;
+    box-shadow: 0px 0px 12px #ddd;
+}
+
+.dialog-title {
+    font-size: 14px;
+    font-weight: bold;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0px 0px 10px #ddd;
+    background-color: #f5f5f5;
+}
+
+.dialog-open {
+    font-weight: bold !important;
+}
+
+.dialog .chats {
+    padding: 10px;
+}
+
+.chat {
+    padding-bottom: 10px;
+}
+
+.chat .avatar-mini {
+    margin-right: 10px;
+}
+
+.messager-reply {
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    background-color: #f5f5f5;
+    margin-top: 15px;
+}
+
+.messager-reply textarea.reply {
+    border: 1px solid #ddd;
+    padding: 3px;
+    margin-top: 10px;
+    width: 98%;
+    height: 30px;
+}
+
+.messager-reply textarea.reply:focus {
+    outline: 0;
+}
+
+.chat .text {
+    padding-top: 5px;
+    font-size: 12px;
+    line-height: 1.8;
+    width: 340px;
+}
+
+.chats .mime {
+    text-align: right;
+}
+
+.chats .mime .text {
+    float: right;
+    color: #999;
+    padding-right: 10px;
+}
+
+.dialog .reply-btn {
+    padding: 4px 12px;
+    display: block;
+    background-color: #3498DB;
+    color: #fff;
+    font-size: 12px;
+    text-decoration: none;
+    width: 50px;
+    text-align: center;
+}
+
+.dialog .reply-btn:hover {
+    background-color: #2980B9;
+}
+
+.error {
+    font-size: 12px;
+    color: #999;
+    text-align: center;
+    padding: 20px 0;
 }
