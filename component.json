@@ -2,7 +2,7 @@
   "name": "messager",
   "repo": "turingou/messager",
   "description": "a sidebar messager widget",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "keywords": [
     "messager",
     "angular",
@@ -20,11 +20,12 @@
   "main": "index.js",
   "scripts": [
     "index.js",
-    "utils.js",
-    "template.js"
+    "template/template.js",
+    "libs/utils.js",
+    "libs/messager.js"
   ],
   "styles": [
-    "messager.css",
-    "scroll.css"
+    "css/messager.css",
+    "css/scroll.css"
   ]
 }
